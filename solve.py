@@ -48,7 +48,7 @@ def build_tree(numbers: np.array) -> AnyNode:
     return root
 
 
-def prune_tree(parent: AnyNode, player_id: int, eps: float = 1e-8):
+def prune_tree(parent: AnyNode, player_id: int, eps: float = 1e-8) -> None:
     """
     Given a game tree, select the optimal choice(s) for a certain player. Note that the eps arg is
     used to get rid of the numpy eps error, which will make the code more robust. For example,
@@ -70,7 +70,7 @@ def prune_tree(parent: AnyNode, player_id: int, eps: float = 1e-8):
     return None
 
 
-def solve_puzzle(n: int = 30, eps: float = 1e-8):
+def solve_puzzle(n: int = 30, eps: float = 1e-8) -> AnyNode:
     """
     Solve the optiver puzzle
     :param n: We will divide interval [0, 1] into n equal length sub-intervals
